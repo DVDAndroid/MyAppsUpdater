@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <Preference
+        android:key="Name"
+        android:layout="@layout/preference"
+        android:summary="@string/unknown"
+        android:title="@string/name" />
+
+    <Preference
+        android:key="PackageName"
+        android:layout="@layout/preference"
+        android:summary="@string/unknown"
+        android:title="@string/package_name" />
+
+    <Preference
+        android:key="Description"
+        android:layout="@layout/preference"
+        android:summary="@string/unknown"
+        android:title="@string/description" />
+
+    <Preference
+        android:key="DownloadLink"
+        android:layout="@layout/preference"
+        android:summary="@string/unknown"
+        android:title="@string/downloadlink" />
+
+    <Preference
+        android:key="Github"
+        android:layout="@layout/preference"
+        android:summary="@string/unknown"
+        android:title="@string/github" />
+
+    <Preference
+        android:key="ExternalLink"
+        android:layout="@layout/preference"
+        android:summary="@string/unknown"
+        android:title="@string/externalLink" />
+
+    <Preference
+        android:key="Type"
+        android:layout="@layout/preference"
+        android:summary="@string/unknown"
+        android:title="@string/type" />
+
+    <Preference
+        android:key="AvailableLangs"
+        android:layout="@layout/preference"
+        android:summary="@string/unknown"
+        android:title="@string/langs" />
+
+    <Preference
+        android:key="VersionName"
+        android:layout="@layout/preference"
+        android:summary="@string/unknown"
+        android:title="@string/versionname" />
+
+    <Preference
+        android:key="VersionCode"
+        android:layout="@layout/preference"
+        android:summary="@string/unknown"
+        android:title="@string/versioncode" />
+
+    <Preference
+        android:key="MinApi"
+        android:layout="@layout/preference"
+        android:summary="@string/unknown"
+        android:title="@string/minapi" />
+
+    <Preference
+        android:key="TargetApi"
+        android:layout="@layout/preference"
+        android:summary="@string/unknown"
+        android:title="@string/targetapi" />
+
+</PreferenceScreen>

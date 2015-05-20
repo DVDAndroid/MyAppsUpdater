@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory android:title="@string/app_settings">
+
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="animations"
+            android:title="@string/animations" />
+
+        <SwitchPreference
+            android:key="connection_type"
+            android:summaryOff="@string/app_download_wifi"
+            android:summaryOn="@string/app_download_3g"
+            android:title="@string/connection_type" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/about">
+
+        <Preference
+            android:key="app_info"
+            android:title="@string/about_this_app" />
+
+        <Preference
+            android:key="libraries"
+            android:summary="@string/libraries"
+            android:title="@string/used_libraries" />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

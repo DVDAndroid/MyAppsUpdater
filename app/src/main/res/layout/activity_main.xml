@@ -1,0 +1,44 @@
+<io.codetail.widget.RevealFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    tools:ignore="RelativeOverlap">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/main_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary" />
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swiperefreshlayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="?attr/actionBarSize">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="16dp"
+            android:paddingLeft="@dimen/padding_recycler"
+            android:paddingRight="@dimen/padding_recycler"
+            android:paddingTop="16dp" />
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+    <tr.xip.errorview.ErrorView
+        android:id="@+id/error_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|center_vertical"
+        android:visibility="gone"
+        app:ev_retryButtonText="@string/retry"
+        app:ev_retryButtonTextColor="?attr/colorPrimary"
+        app:ev_subtitle="@string/no_internet"
+        app:ev_subtitleColor="@android:color/holo_blue_bright"
+        app:ev_titleColor="@android:color/holo_blue_dark" />
+
+</io.codetail.widget.RevealFrameLayout>
