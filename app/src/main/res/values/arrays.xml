@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string-array name="libraries" translatable="false">
+    <string-array name="list_libraries" translatable="false">
         <item><b>UrlImageViewHelper</b> by koushikdutta</item>
         <item><b>FloatingActionButton</b> by makovkastar</item>
         <item><b>SnackBar</b> by mrengineer13</item>

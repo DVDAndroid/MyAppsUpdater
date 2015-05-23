@@ -38,7 +38,7 @@ public class SettingsActivity extends AppCompatActivity {
 
 	private static MaterialDialog.Builder createUsedLibrariesAlert() {
 		return new MaterialDialog.Builder(mContext)
-				.title(R.string.used_libraries).items(R.array.libraries)
+				.title(R.string.used_libraries).items(R.array.list_libraries)
 				.positiveText(android.R.string.ok)
 				.itemsCallback(new MaterialDialog.ListCallback() {
 					@Override
