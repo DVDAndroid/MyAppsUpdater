@@ -49,6 +49,11 @@ public class RecyclerItemClickListener implements
 		// Not needed.
 	}
 
+	@Override
+	public void onRequestDisallowInterceptTouchEvent(boolean b) {
+
+	}
+
 	/**
 	 * A click listener for items.
 	 */
