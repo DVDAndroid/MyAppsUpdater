@@ -54,5 +54,6 @@
     <string name="open_settings">Open settings…</string>
     <string name="only_wifi_warn">App cannot be downloaded because you\'re on mobile data. To download app via mobile data, disable this option in settings.</string>
     <string name="insert_link">Insert a valid link</string>
+    <string name="visit_webpage">Visit webpage!</string>
 
 </resources>

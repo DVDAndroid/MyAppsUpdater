@@ -34,6 +34,7 @@ public class Utils {
 	public static final String PREFERENCE_KEY_ANIMATIONS_ENABLED = "animations";
 	public static final String PREFERENCE_KEY_CUSTOM_URL = "custom_xml_file";
 	public static final String PREFERENCE_KEY_LIBRARIES = "libraries";
+	public static final String PREFERENCE_KEY_WEBPAGE = "webpage";
 	public static final String PREFERENCE_KEY_CONNECTION_TYPE = "connection_type";
 
 	public static CharSequence[] PREFERENCE_KEYS = new CharSequence[] {

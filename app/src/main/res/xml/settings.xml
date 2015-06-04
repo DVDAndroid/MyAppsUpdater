@@ -23,6 +23,10 @@
             android:title="@string/about_this_app" />
 
         <Preference
+            android:key="webpage"
+            android:title="@string/visit_webpage" />
+
+        <Preference
             android:key="libraries"
             android:summary="@string/libraries"
             android:title="@string/used_libraries" />

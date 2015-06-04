@@ -52,4 +52,5 @@
     <string name="warningVersion">ATTENZIONE! Questa app è in %1$s.\nL\' app potrebbe essere instabile.\nLa vuoi %2$s?</string>
     <string name="what_now">Cosa vuoi fare adesso?</string>
     <string name="insert_link">Inserisci un link valido</string>
+    <string name="visit_webpage">Visita la webpage!</string>
 </resources>

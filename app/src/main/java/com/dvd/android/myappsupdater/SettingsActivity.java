@@ -5,6 +5,7 @@ import static com.dvd.android.myappsupdater.utils.Utils.LIST_LINK;
 import static com.dvd.android.myappsupdater.utils.Utils.PREFERENCE_KEY_APP_INFO;
 import static com.dvd.android.myappsupdater.utils.Utils.PREFERENCE_KEY_CUSTOM_URL;
 import static com.dvd.android.myappsupdater.utils.Utils.PREFERENCE_KEY_LIBRARIES;
+import static com.dvd.android.myappsupdater.utils.Utils.PREFERENCE_KEY_WEBPAGE;
 
 import android.content.Context;
 import android.content.Intent;
@@ -35,6 +36,7 @@ public class SettingsActivity extends AppCompatActivity {
 	protected static final int DEV_STEPS = 7;
 	protected static String DEV_ENABLE = "dev_enable";
 	private static Context mContext;
+	private static String WEBPAGE_LINK = "http://dvdandroid.github.io";
 
 	private static MaterialDialog.Builder createUsedLibrariesAlert() {
 		return new MaterialDialog.Builder(mContext)
@@ -161,6 +163,9 @@ public class SettingsActivity extends AppCompatActivity {
 			} catch (PackageManager.NameNotFoundException e) {
 				e.printStackTrace();
 			}
+
+			Preference webpage = findPreference(PREFERENCE_KEY_WEBPAGE);
+			webpage.setSummary(WEBPAGE_LINK);
 		}
 
 		@Override
@@ -191,6 +196,10 @@ public class SettingsActivity extends AppCompatActivity {
 					break;
 				case PREFERENCE_KEY_LIBRARIES:
 					createUsedLibrariesAlert().show();
+					break;
+				case PREFERENCE_KEY_WEBPAGE:
+					startActivity(new Intent(Intent.ACTION_VIEW,
+							Uri.parse(WEBPAGE_LINK)));
 					break;
 			}
 
