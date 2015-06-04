@@ -55,6 +55,7 @@ public class MainActivity extends AppCompatActivity implements
 	private List<App> appList;
 	private RecyclerView mRecyclerView;
 	private SwipeRefreshLayout mSwipeRefreshLayout;
+	private boolean VIA_BROWSER = false;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -246,6 +247,18 @@ public class MainActivity extends AppCompatActivity implements
 				mSwipeRefreshLayout.setRefreshing(false);
 			else
 				mProgressDialog.dismiss();
+
+			if (getIntent().getAction().equals(Intent.ACTION_VIEW)) {
+				String uri = getIntent().getData().getEncodedQuery();
+				if (uri != null) {
+					VIA_BROWSER = true;
+					String id = uri.replace("id=", "");
+					mClickedApp = appList.get(Integer.parseInt(id));
+					Intent intent = new Intent(MainActivity.this,
+							DetailsActivity.class);
+					startActivity(intent);
+				}
+			}
 		}
 	}
 }
