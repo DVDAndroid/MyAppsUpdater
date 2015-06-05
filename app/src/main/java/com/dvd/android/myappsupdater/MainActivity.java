@@ -56,7 +56,6 @@ public class MainActivity extends AppCompatActivity implements
 	private List<App> appList;
 	private RecyclerView mRecyclerView;
 	private SwipeRefreshLayout mSwipeRefreshLayout;
-	private boolean VIA_BROWSER = false;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -254,7 +253,6 @@ public class MainActivity extends AppCompatActivity implements
 				if (uri.toString().contains("app.html")) {
 					String encodedQuery = uri.getEncodedQuery();
 					if (encodedQuery != null) {
-						VIA_BROWSER = true;
 						String id = encodedQuery.replace("id=", "");
 						mClickedApp = appList.get(Integer.parseInt(id));
 						Intent intent = new Intent(MainActivity.this,
