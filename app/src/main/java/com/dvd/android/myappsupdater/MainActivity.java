@@ -6,6 +6,7 @@ import static com.dvd.android.myappsupdater.utils.Utils.createCircularReveal;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
@@ -248,15 +249,18 @@ public class MainActivity extends AppCompatActivity implements
 			else
 				mProgressDialog.dismiss();
 
-			if (getIntent().getAction().equals(Intent.ACTION_VIEW)) {
-				String uri = getIntent().getData().getEncodedQuery();
-				if (uri != null) {
-					VIA_BROWSER = true;
-					String id = uri.replace("id=", "");
-					mClickedApp = appList.get(Integer.parseInt(id));
-					Intent intent = new Intent(MainActivity.this,
-							DetailsActivity.class);
-					startActivity(intent);
+			if (getIntent().getAction().equals(Intent.ACTION_VIEW) && result) {
+				Uri uri = getIntent().getData();
+				if (uri.toString().contains("app.html")) {
+					String encodedQuery = uri.getEncodedQuery();
+					if (encodedQuery != null) {
+						VIA_BROWSER = true;
+						String id = encodedQuery.replace("id=", "");
+						mClickedApp = appList.get(Integer.parseInt(id));
+						Intent intent = new Intent(MainActivity.this,
+								DetailsActivity.class);
+						startActivity(intent);
+					}
 				}
 			}
 		}
