@@ -221,6 +221,8 @@ public class DetailsActivity extends AppCompatActivity {
 				if (packageName.equals(getPackageName()) || i == null)
 					fab.setVisibility(View.GONE);
 
+				findViewById(R.id.details_tv_update_available).setVisibility(
+						View.GONE);
 				fab.setImageResource(R.mipmap.ic_play_arrow_grey600_24dp);
 				fab.setOnClickListener(new View.OnClickListener() {
 					@Override
