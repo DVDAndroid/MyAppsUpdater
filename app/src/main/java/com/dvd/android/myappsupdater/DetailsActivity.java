@@ -232,6 +232,9 @@ public class DetailsActivity extends AppCompatActivity {
 				});
 			}
 		} else {
+			findViewById(R.id.details_tv_update_available).setVisibility(
+					View.GONE);
+
 			fab.setImageResource(R.mipmap.ic_action_file_download);
 			fab.setOnClickListener(new View.OnClickListener() {
 				@Override
